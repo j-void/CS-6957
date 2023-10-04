@@ -1,4 +1,5 @@
 from typing import List, Set
+from collections import deque
 
 class Token:
     def __init__(self, idx: int, word: str, pos: str):
@@ -17,9 +18,11 @@ class DependencyEdge:
 class ParseState:
     def __init__(self, stack: List[Token], parse_buffer: List[Token], dependencies: List[DependencyEdge]):
         self.stack = stack # A stack of token indices in the sentence. Assumption: the root token has index 0, the rest of the tokens in the sentence starts with 1.
-        self.parse_buffer = parse_buffer  # A buffer of token indices
+        self.parse_buffer = deque(parse_buffer)  # A buffer of token indices
         self.dependencies = dependencies
-        pass
+        # print("init")
+        # print("pb:", [a.word for a in self.parse_buffer])
+        # print("s:", [a.word for a in self.stack])
 
     def add_dependency(self, source_token, target_token, label):
         self.dependencies.append(
@@ -32,41 +35,45 @@ class ParseState:
 
 
 def shift(state: ParseState) -> None:
-    # TODO: Implement this as an in-place operation that updates the parse state and does not return anything
-
-    # The python documentation has some pointers on how lists can be used as stacks and queues. This may come useful:
-    # https://docs.python.org/3/tutorial/datastructures.html#using-lists-as-stacks
-    # https://docs.python.org/3/tutorial/datastructures.html#using-lists-as-queues
-
-    pass
-
+    buffer_value = state.parse_buffer.popleft() 
+    state.stack.append(buffer_value)
+    # print("shift")
+    # print("pb:", [a.word for a in state.parse_buffer])
+    # print("s:", [a.word for a in state.stack])
 
 def left_arc(state: ParseState, label: str) -> None:
-    # TODO: Implement this as an in-place operation that updates the parse state and does not return anything
+    source = state.stack.pop()
+    target = state.stack.pop()
+    state.add_dependency(source, target, label)
+    state.stack.append(source)
+    # print("left_arc")
+    # print("pb:", [a.word for a in state.parse_buffer])
+    # print("s:", [a.word for a in state.stack])
 
-    # The python documentation has some pointers on how lists can be used as stacks and queues. This may come useful:
-    # https://docs.python.org/3/tutorial/datastructures.html#using-lists-as-stacks
-    # https://docs.python.org/3/tutorial/datastructures.html#using-lists-as-queues
-
-    # Also, you will need to use the state.add_dependency method defined above.
-
-    pass
 
 
 def right_arc(state: ParseState, label: str) -> None:
-    # TODO: Implement this as an in-place operation that updates the parse state and does not return anything
-
-    # The python documentation has some pointers on how lists can be used as stacks and queues. This may come useful:
-    # https://docs.python.org/3/tutorial/datastructures.html#using-lists-as-stacks
-    # https://docs.python.org/3/tutorial/datastructures.html#using-lists-as-queues
-
-    # Also, you will need to use the state.add_dependency method defined above.
-
-    pass
+    target = state.stack.pop()
+    source = state.stack.pop()
+    state.add_dependency(source, target, label)
+    state.stack.append(source)
+    # print("right_arc")
+    # print("pb:", [a.word for a in state.parse_buffer])
+    # print("s:", [a.word for a in state.stack])
 
 
 
 def is_final_state(state: ParseState, cwindow: int) -> bool:
-    # TODO: Implemement this
-
-    pass
+    # print("final")
+    # print("pb:", [a.word for a in state.parse_buffer])
+    # print("s:", [a.word for a in state.stack])
+    buffer_words = [a.word for a in state.parse_buffer]
+    stack_words = [a.word for a in state.stack]
+    if "[NULL]" in buffer_words and "[NULL]" in stack_words:
+        if len(state.parse_buffer) <= cwindow and len(state.stack) <= cwindow+1:
+            return True
+        return False
+    else:
+        if len(state.parse_buffer) == 0 and len(state.stack) == 1:
+            return True
+        return False

@@ -1,4 +1,4 @@
-from state import Token, ParseState, shift, left_arc, right_arc, is_final_state
+from .state import Token, ParseState, shift, left_arc, right_arc, is_final_state
 
 
 def get_deps(words_lists, actions, cwindow):
@@ -31,7 +31,7 @@ def get_deps(words_lists, actions, cwindow):
                 left_arc(state, action[9:])
             else:
                 right_arc(state, action[9:])
-        assert is_final_state(state,cwindow)    # Check to see that the parse is complete
+        assert is_final_state(state,cwindow), f"buffer:{[a.word for a in state.parse_buffer]}, stack:{[a.word for a in state.stack]}"     # Check to see that the parse is complete
         right_arc(state, "root")    # Add te root dependency for the remaining element on stack
         all_deps.append(state.dependencies.copy())  # Copy over the dependenices found
     return all_deps
