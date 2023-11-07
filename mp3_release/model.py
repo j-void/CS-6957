@@ -18,7 +18,11 @@ class LSTM_LanguageModel(nn.Module):
         self.rnns = nn.LSTM(input_size=embedding_dim, hidden_size=hidden_dim, num_layers=num_layers, batch_first=True)
         self.vocab_size = vocab_size
         self.hidden_dim = hidden_dim
-        self.mlp = nn.Linear(hidden_dim, vocab_size)
+        self.mlp = nn.Sequential(
+            nn.Linear(hidden_dim, hidden_dim),
+            nn.ReLU(),
+            nn.Linear(hidden_dim, vocab_size),
+        ) 
    
 
     def forward(self, inputs, targets, loss):

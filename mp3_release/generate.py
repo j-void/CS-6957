@@ -14,7 +14,7 @@ import copy
 import random
 random.seed(0)
 np.random.seed(0)
-torch.manual_seed(1)
+torch.manual_seed(2)
 
 
 
@@ -29,14 +29,14 @@ if __name__ == "__main__":
     save_dir = ""
     edim = 50
     hidden_dim = 200
-    num_layers = 1
+    num_layers = 2
     context_window = 500
     DEVICE = 'cuda'
     
     examples = ["The little boy was", "Once upon a time in", "With the target in", "Capitals are big cities. For example,", "A cheap alternative to"]
 
     model = LSTM_LanguageModel(vocab_size=len(vocab_dict), embedding_dim=edim, hidden_dim=hidden_dim, num_layers=num_layers, context_window=context_window)
-    model.load_state_dict(torch.load("checkpoints/n1_lr_0_0001/save/model_val.torch"))
+    model.load_state_dict(torch.load("checkpoints/n2_lr_0_0001/save/model_val.torch"))
     model.to(DEVICE)
     model.eval()
     

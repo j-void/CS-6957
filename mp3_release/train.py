@@ -43,7 +43,8 @@ def get_preplexity(model, data_loader, device):
             avg_counts = torch.zeros(pad_counts.shape)
             for b in range(final_loss.shape[0]):
                 a = 500 - pad_counts[b]
-                avg_counts[b] = torch.mean(final_loss[b,:a])
+                a = a + 1 if a < 499 else a
+                avg_counts[b] = torch.mean(final_loss[b,:a+1])
 
             p = torch.exp(avg_counts)
             p_list.append(torch.mean(p).item())
@@ -90,7 +91,7 @@ if __name__ == "__main__":
     print("--------- Initializing Neworks ---------")
     model = LSTM_LanguageModel(vocab_size=len(vocab_dict), embedding_dim=cfg.edim, hidden_dim=cfg.hidden_dim, num_layers=cfg.num_layers, context_window=cfg.context_window)
     model.to(cfg.DEVICE)
-    model.apply(weight_init(module=nn.Linear, initf=nn.init.kaiming_uniform_))
+    model.apply(weight_init(module=nn.Linear, initf=nn.init.kaiming_normal_))
     optimizer = torch.optim.Adam(model.parameters(), cfg.learning_rate)
     optimizer.zero_grad()
 
