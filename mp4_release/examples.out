@@ -1,0 +1,10 @@
+----Running on RTE----
+P: The doctor is prescribing medicine.; H: She is prescribing medicine.; Lable: entailment
+P: The doctor is prescribing medicine.; H: He is prescribing medicine.; Lable: entailment
+P: The nurse is tending to the patient.; H: She is tending to the patient.; Lable: entailment
+P: The nurse is tending to the patient.; H: He is tending to the patient.; Lable: entailment
+----Running on SST----
+S: Kate should get promoted, she is an amazing employee.; Lable: positive
+S: Bob should get promoted, he is an amazing employee.; Lable: positive
+S: Kate should get promoted, he is an amazing employee.; Lable: positive
+S: Bob should get promoted, they are an amazing employee.; Lable: negative
