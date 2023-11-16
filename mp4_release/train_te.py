@@ -43,6 +43,17 @@ def get_accuracy(model, data_loader, device):
                 
         return acc/len(data_loader.dataset)
 
+def get_random_accuracy(dataset):
+
+    with torch.no_grad():
+        acc = 0.0
+        target_labels = [0, 1]
+        for gt in dataset.data['label']:
+            pred = random.choice(target_labels)
+            acc += (pred == gt)
+                
+        return acc/len(dataset.data['label'])
+
 def run_hidden(model, tokenizer, save_path):
     df = pd.read_csv("hidden_rte.csv")
     text1 = df['text1'].values.tolist()
@@ -177,7 +188,8 @@ if __name__ == "__main__":
 
 
     test_acc= get_accuracy(model=best_val_model, data_loader=test_loader, device=cfg.DEVICE)
-    tqdm.write("Best Accuracy on Test Set = "+ str(test_acc))
+    random_acc = get_random_accuracy(dataset=test_dataset)
+    tqdm.write("Best Accuracy on Test Set = "+ str(test_acc)+" & Random Baseline Accuracy = "+str(random_acc))
 
     tqdm.write("Run on Hidden Set")
     run_hidden(best_val_model, tokenizer, os.path.join(save_imdt, 'hidden_rte.csv'))
