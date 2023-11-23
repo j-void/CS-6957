@@ -186,7 +186,7 @@ if __name__ == "__main__":
     tqdm.write("Best Accuracy on Test Set = "+ str(test_acc)+" & Random Baseline Accuracy = "+str(random_acc))
 
     tqdm.write("Run on Hidden Set")
-    run_hidden(best_val_model, tokenizer, os.path.join(save_imdt, 'hidden_rte.csv'))
+    run_hidden(best_val_model, tokenizer, os.path.join(save_imdt, 'hidden_sst2.csv'))
 
     tqdm.write("Done")
     
