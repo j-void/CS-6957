@@ -1,0 +1,2 @@
+Total Count = 169211970, Conditional Probabilities = 779962
+Test Preplexity = 21.226615214002624

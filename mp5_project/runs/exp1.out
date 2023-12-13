@@ -1,0 +1,38 @@
+--------- Initializing Neworks ---------
+Epoch - 1 : Train Loss = 3.1538444018522465 | Val CER = 0.5531109202152692
+Current val best found at epoch=1
+Epoch - 2 : Train Loss = 1.9979257899940037 | Val CER = 0.4330572746370382
+Current val best found at epoch=2
+Epoch - 3 : Train Loss = 1.5977608897651505 | Val CER = 0.3557231753324788
+Current val best found at epoch=3
+Epoch - 4 : Train Loss = 1.3490161719758575 | Val CER = 0.3109376817529507
+Current val best found at epoch=4
+Epoch - 5 : Train Loss = 1.1641389734235927 | Val CER = 0.27935404562023086
+Current val best found at epoch=5
+Epoch - 6 : Train Loss = 1.0148903076472486 | Val CER = 0.2709859772195723
+Current val best found at epoch=6
+Epoch - 7 : Train Loss = 0.8890723302395119 | Val CER = 0.2422473117546813
+Current val best found at epoch=7
+Epoch - 8 : Train Loss = 0.7791520709876302 | Val CER = 0.23483375982906105
+Current val best found at epoch=8
+Epoch - 9 : Train Loss = 0.6889481240031913 | Val CER = 0.22610338839767996
+Current val best found at epoch=9
+Epoch - 10 : Train Loss = 0.6112139085406058 | Val CER = 0.2140969578734373
+Current val best found at epoch=10
+Epoch - 11 : Train Loss = 0.5420781850354439 | Val CER = 0.21425756296535933
+Epoch - 12 : Train Loss = 0.48586073536156305 | Val CER = 0.2046505728039788
+Current val best found at epoch=12
+Epoch - 13 : Train Loss = 0.4380148048172087 | Val CER = 0.20555244788697632
+Epoch - 14 : Train Loss = 0.3948662478329616 | Val CER = 0.20729357477441673
+Epoch - 15 : Train Loss = 0.35486153657134734 | Val CER = 0.20017810496636504
+Current val best found at epoch=15
+Epoch - 16 : Train Loss = 0.3231366300415634 | Val CER = 0.20873950067294955
+Epoch - 17 : Train Loss = 0.2962714257064768 | Val CER = 0.2065220333317116
+Epoch - 18 : Train Loss = 0.2707263400212169 | Val CER = 0.1970562482764746
+Current val best found at epoch=18
+Epoch - 19 : Train Loss = 0.24874903193332976 | Val CER = 0.19471806911494705
+Current val best found at epoch=19
+Epoch - 20 : Train Loss = 0.23360135257542775 | Val CER = 0.1939481363387309
+Current val best found at epoch=20
+--------- Done Training ---------
+CER on Test Set = 0.18001002975129793

@@ -1,0 +1,24 @@
+--------- Initializing Neworks ---------
+Epoch - 1 : Train Loss = 3.878136981405408 | Val CER = 0.8429593087461086
+Current val best found at epoch=1
+Epoch - 2 : Train Loss = 2.9592527270923146 | Val CER = 0.7555500476151099
+Current val best found at epoch=2
+Epoch - 3 : Train Loss = 2.6204934559812014 | Val CER = 0.6919363409118429
+Current val best found at epoch=3
+Epoch - 4 : Train Loss = 2.3691508592830117 | Val CER = 0.6182426833674417
+Current val best found at epoch=4
+Epoch - 5 : Train Loss = 2.1502676418529716 | Val CER = 0.5672982755368079
+Current val best found at epoch=5
+Epoch - 6 : Train Loss = 1.959436733693782 | Val CER = 0.5122907556273812
+Current val best found at epoch=6
+Epoch - 7 : Train Loss = 1.8023271609154539 | Val CER = 0.47788410702437395
+Current val best found at epoch=7
+Epoch - 8 : Train Loss = 1.6745121022384055 | Val CER = 0.7055098283038934
+Epoch - 9 : Train Loss = 1.5558041099649786 | Val CER = 0.9056894173290071
+Epoch - 10 : Train Loss = 1.4589803825610776 | Val CER = 1.206102784316952
+Epoch - 11 : Train Loss = 1.3760814342034438 | Val CER = 1.808351494553336
+Epoch - 12 : Train Loss = 1.3040203237887886 | Val CER = 3.048685025165017
+Epoch - 13 : Train Loss = 1.2277317054345358 | Val CER = 4.324257981522745
+Epoch - 14 : Train Loss = 1.1677355801961269 | Val CER = 5.65147510077694
+Epoch - 15 : Train Loss = 1.1135233951048502 | Val CER = 5.757185737412073
+Epoch - 16 : Train Loss = 1.0640083985562712 | Val CER = 7.121617452006449

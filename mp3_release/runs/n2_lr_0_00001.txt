@@ -1,0 +1,11 @@
+--------- Initializing Neworks ---------
+No. of Parameters = 660286
+Epoch - 1 : Train CE Loss = 3.006702606730978 | Val Preplexity = 12.045794743244421| Val CE Loss = 0.3778862261743549
+Current val best found at epoch=1
+Epoch - 2 : Train CE Loss = 2.3751983188391756 | Val Preplexity = 9.64322603024181| Val CE Loss = 0.34412847869283697
+Current val best found at epoch=2
+Epoch - 3 : Train CE Loss = 2.2026918702905744 | Val Preplexity = 9.71629922047223| Val CE Loss = 0.32690520309878074
+Epoch - 4 : Train CE Loss = 2.0978911027771368 | Val Preplexity = 10.36611440323517| Val CE Loss = 0.3153917770249356
+Epoch - 5 : Train CE Loss = 2.023469083511392 | Val Preplexity = 10.896784870233601| Val CE Loss = 0.3070940925480527
+--------- Done Training ---------
+Best Preplexity on Test Set = 10.674202493208163

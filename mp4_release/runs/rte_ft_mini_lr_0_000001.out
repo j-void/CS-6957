@@ -1,0 +1,19 @@
+--------- Using BERT-Mini ---------
+--------- Initializing Neworks ---------
+Epoch - 1 : Train CE Loss = 0.7095580742909358 | Val Accuracy = 0.5451263537906137
+Current val best found at epoch=1
+Epoch - 2 : Train CE Loss = 0.6957594247964712 | Val Accuracy = 0.5379061371841155
+Epoch - 3 : Train CE Loss = 0.6898019909858704 | Val Accuracy = 0.5487364620938628
+Current val best found at epoch=3
+Epoch - 4 : Train CE Loss = 0.6863986009206527 | Val Accuracy = 0.5270758122743683
+Epoch - 5 : Train CE Loss = 0.6825601550248953 | Val Accuracy = 0.5342960288808665
+Epoch - 6 : Train CE Loss = 0.6842895012635452 | Val Accuracy = 0.5379061371841155
+Epoch - 7 : Train CE Loss = 0.6831294359304966 | Val Accuracy = 0.5270758122743683
+Epoch - 8 : Train CE Loss = 0.6798502099819672 | Val Accuracy = 0.5270758122743683
+Epoch - 9 : Train CE Loss = 0.6772810159585415 | Val Accuracy = 0.5342960288808665
+Epoch - 10 : Train CE Loss = 0.6776548501772758 | Val Accuracy = 0.5487364620938628
+Current val best found at epoch=10
+--------- Done Training ---------
+Best Accuracy on Test Set = 0.5487364620938628 & Random Baseline Accuracy = 0.5740072202166066
+Run on Hidden Set
+Done

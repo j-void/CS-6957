@@ -1,0 +1,23 @@
+--------- Initializing Neworks ---------
+Epoch - 1 : Train CE Loss = 0.7432524282997901 | Val Accuracy = 0.44380733944954126
+Current val best found at epoch=1
+Epoch - 2 : Train CE Loss = 0.7199906105295234 | Val Accuracy = 0.4461009174311927
+Current val best found at epoch=2
+Epoch - 3 : Train CE Loss = 0.711140400225963 | Val Accuracy = 0.4598623853211009
+Current val best found at epoch=3
+Epoch - 4 : Train CE Loss = 0.7010162483661546 | Val Accuracy = 0.48853211009174313
+Current val best found at epoch=4
+Epoch - 5 : Train CE Loss = 0.6932640502212244 | Val Accuracy = 0.5229357798165137
+Current val best found at epoch=5
+Epoch - 6 : Train CE Loss = 0.6900311653767157 | Val Accuracy = 0.5447247706422018
+Current val best found at epoch=6
+Epoch - 7 : Train CE Loss = 0.6845610393296688 | Val Accuracy = 0.5665137614678899
+Current val best found at epoch=7
+Epoch - 8 : Train CE Loss = 0.6806037065086015 | Val Accuracy = 0.6112385321100917
+Current val best found at epoch=8
+Epoch - 9 : Train CE Loss = 0.6766864744895095 | Val Accuracy = 0.5986238532110092
+Epoch - 10 : Train CE Loss = 0.6742350486440396 | Val Accuracy = 0.6100917431192661
+--------- Done Training ---------
+Best Accuracy on Test Set = 0.5842943437671609
+Run on Hidden Set
+Done
